@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package api.operate;
+
+option go_package = "content_manage/api/operate;operate";
+option java_multiple_files = true;
+option java_package = "api.operate";
+
+service App {
+	rpc CreateContent (CreateContentReq) returns (CreateContentRsp);
+}
+
+message CreateContentReq {}
+message CreateContentRsp {}
