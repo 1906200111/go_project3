@@ -7,7 +7,6 @@ option java_multiple_files = true;
 option java_package = "api.operate";
 
 service App {
-	//dddd
 	rpc CreateContent (CreateContentReq) returns (CreateContentRsp);
 }
 
