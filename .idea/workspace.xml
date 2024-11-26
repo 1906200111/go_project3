@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="638733d8-6419-445f-b290-a05efb60e12f" name="更改" comment="更新">
-      <change beforePath="$PROJECT_DIR$/content_manage/cmd/content_manage/wire_gen.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/cmd/content_manage/wire_gen.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content_manage/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content_manage/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_manage/api/helloworld/v1/error_reason.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_manage/api/helloworld/v1/error_reason.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_manage/api/helloworld/v1/greeter.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_manage/api/helloworld/v1/greeter.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_manage/api/helloworld/v1/greeter_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_manage/api/helloworld/v1/greeter_http.pb.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
