@@ -5,22 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="638733d8-6419-445f-b290-a05efb60e12f" name="更改" comment="更新">
+      <change afterPath="$PROJECT_DIR$/content_manage/api/operate/app_http.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content_manage/internal/biz/content.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content_manage/internal/data/content.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content_manage/internal/service/createcontent_handle.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content_manage/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_manage/configs/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/configs/config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content_manage/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_manage/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_manage/internal/data/data.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/internal/data/data.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
   <component name="GOROOT" url="file://$PROJECT_DIR$/../../Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2pNHi1QckIj2HZcL2LYwBvb17ki" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -33,6 +46,7 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultGoTemplateProperty": "Go File",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
@@ -42,7 +56,7 @@
     "git-widget-placeholder": "main",
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "C:/Users/luo20",
+    "last_opened_file_path": "C:/D/Go Project/go_project2",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
