@@ -1,13 +1,10 @@
 package service
 
 import (
-	"bytes"
 	"content_manage/api/operate"
 	"content_manage/internal/biz"
 	"context"
-	"encoding/json"
 	"github.com/google/uuid"
-	"net/http"
 	"time"
 )
 
@@ -16,7 +13,7 @@ func (a *AppService) CreateContent(ctx context.Context,
 	content := req.GetContent()
 	uc := a.uc
 	contentID := uuid.New().String()
-	_, err := uc.CreateContent(ctx, &biz.Content{
+	err := uc.CreateContent(ctx, &biz.Content{
 		ContentID:      contentID,
 		Title:          content.GetTitle(),
 		VideoURL:       content.GetVideoUrl(),
@@ -34,28 +31,5 @@ func (a *AppService) CreateContent(ctx context.Context,
 	if err != nil {
 		return nil, err
 	}
-	if err := a.ExecFlow(contentID); err != nil {
-		return nil, err
-	}
 	return &operate.CreateContentRsp{}, nil
-}
-
-func (a *AppService) ExecFlow(contentID string) error {
-	url := "http://localhost:7788/content-flow"
-	method := "GET"
-	payload := map[string]interface{}{
-		"content_id": contentID,
-	}
-	data, _ := json.Marshal(payload)
-	client := &http.Client{}
-	req, err := http.NewRequest(method, url, bytes.NewReader(data))
-	if err != nil {
-		return err
-	}
-	req.Header.Add("Content-Type", "application/json")
-	_, err = client.Do(req)
-	if err != nil {
-		return err
-	}
-	return nil
 }

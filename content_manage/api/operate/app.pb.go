@@ -20,6 +20,7 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// 数据格式
 type Content struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -174,12 +175,12 @@ func (x *Content) GetApprovalStatus() int32 {
 	return 0
 }
 
+// 增加的前端后端返回的数据格式
 type CreateContentReq struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// 内容
 	Content *Content `protobuf:"bytes,1,opt,name=content,proto3" json:"content,omitempty"`
 }
 
@@ -256,12 +257,12 @@ func (*CreateContentRsp) Descriptor() ([]byte, []int) {
 	return file_operate_app_proto_rawDescGZIP(), []int{2}
 }
 
+// 更新的前端后端返回的数据格式
 type UpdateContentReq struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// 内容
 	Content *Content `protobuf:"bytes,1,opt,name=content,proto3" json:"content,omitempty"`
 }
 
@@ -338,6 +339,7 @@ func (*UpdateContentRsp) Descriptor() ([]byte, []int) {
 	return file_operate_app_proto_rawDescGZIP(), []int{4}
 }
 
+// 删除的前端后端返回的数据格式
 type DeleteContentReq struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -419,6 +421,7 @@ func (*DeleteContentRsp) Descriptor() ([]byte, []int) {
 	return file_operate_app_proto_rawDescGZIP(), []int{6}
 }
 
+// 查找的前端后端返回的数据格式
 type FindContentReq struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -508,7 +511,7 @@ type FindContentRsp struct {
 
 	// 内容总数
 	Total int64 `protobuf:"varint,1,opt,name=total,proto3" json:"total,omitempty"`
-	// 内容
+	// 内容列表
 	Contents []*Content `protobuf:"bytes,2,rep,name=contents,proto3" json:"contents,omitempty"`
 }
 

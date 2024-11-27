@@ -16,7 +16,7 @@ service App {
 	// 内容查找
 	rpc FindContent (FindContentReq) returns (FindContentRsp);
 }
-
+//数据格式
 message Content {
 	// 内容ID
 	int64 id = 1;
@@ -46,25 +46,25 @@ message Content {
 	int32 approval_status = 13;
 }
 
+//增加的前端后端返回的数据格式
 message CreateContentReq {
-	// 内容
 	Content  content = 1;
 }
 message CreateContentRsp {}
 
+//更新的前端后端返回的数据格式
 message UpdateContentReq {
-	// 内容
 	Content  content = 1;
 }
 message UpdateContentRsp {}
 
-
+//删除的前端后端返回的数据格式
 message DeleteContentReq{
 	int64 id = 1;
 }
-
 message DeleteContentRsp{}
 
+//查找的前端后端返回的数据格式
 message FindContentReq {
 	// 内容ID
 	int64 id = 1;
@@ -77,10 +77,9 @@ message FindContentReq {
 	// 页大小
 	int32 page_size = 5;
 }
-
 message FindContentRsp {
 	// 内容总数
 	int64 total = 1;
-	// 内容
+	// 内容列表
 	repeated Content contents = 2;
 }

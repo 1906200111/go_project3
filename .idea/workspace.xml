@@ -5,15 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="638733d8-6419-445f-b290-a05efb60e12f" name="更改" comment="更新">
-      <change afterPath="$PROJECT_DIR$/content_manage/api/operate/app_http.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content_manage/internal/biz/content.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content_manage/internal/data/content.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content_manage/internal/service/createcontent_handle.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content_manage/cmd/client/client.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content_manage/internal/service/deletecontent_handle.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content_manage/internal/service/findcontent_handle.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content_manage/internal/service/updatecontent_handle.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go_project2/internal/api/operate/app.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go_project2/internal/api/operate/app.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go_project2/internal/api/operate/app_grpc.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content_manage/configs/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/configs/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_manage/api/operate/app.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/api/operate/app.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_manage/api/operate/app.proto" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/api/operate/app.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_manage/api/operate/app_grpc.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/api/operate/app_grpc.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_manage/api/operate/app_http.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_manage/bin/content_manage.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_manage/cmd/content_manage/wire_gen.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/cmd/content_manage/wire_gen.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content_manage/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content_manage/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_manage/internal/biz/biz.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/internal/biz/biz.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_manage/internal/biz/content.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/internal/biz/content.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_manage/internal/biz/greeter.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_manage/internal/data/content.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/internal/data/content.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content_manage/internal/data/data.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/internal/data/data.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_manage/internal/data/greeter.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_manage/internal/service/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/internal/service/app.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_manage/internal/service/createcontent_handle.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/internal/service/createcontent_handle.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_manage/openapi.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/openapi.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go_project2/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go_project2/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go_project2/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go_project2/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go_project2/internal/services/cms.go" beforeDir="false" afterPath="$PROJECT_DIR$/go_project2/internal/services/cms.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +49,20 @@
   </component>
   <component name="GOROOT" url="file://$PROJECT_DIR$/../../Go" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/go_project2" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;1906200111&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/1906200111/go_project3.git&quot;,
+    &quot;accountId&quot;: &quot;0f52385e-34c6-4b70-9954-fed8f9d6b313&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -52,22 +84,32 @@
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
     "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "C:/D/Go Project/go_project2",
+    "last_opened_file_path": "D:/Go Project/go_project3/go_project2/internal/api",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Go Project\go_project3\go_project2\internal\api" />
+      <recent name="D:\Go Project\go_project3\go_project2" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-gosdk-33c477a475b1-e0158606a674-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-241.17011.92" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-GO-241.17011.92" />
+        <option value="bundled-gosdk-5df93f7ad4aa-df9ad98b711f-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-242.23339.24" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-GO-242.23339.24" />
       </set>
     </attachedChunks>
   </component>
