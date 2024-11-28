@@ -1,10 +1,10 @@
 package services
 
 import (
+	"content_system/internal/dao"
+	"content_system/internal/model"
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"go_project2/internal/dao"
-	"go_project2/internal/model"
 	"golang.org/x/crypto/bcrypt"
 	"net/http"
 	"time"

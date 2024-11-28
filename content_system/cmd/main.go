@@ -1,9 +1,9 @@
 package main
 
 import (
+	"content_system/internal/api"
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"go_project2/internal/api"
 )
 
 func main() {

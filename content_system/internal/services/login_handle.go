@@ -1,12 +1,12 @@
 package services
 
 import (
+	"content_system/internal/dao"
+	"content_system/internal/utils"
 	"context"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
-	"go_project2/internal/dao"
-	"go_project2/internal/utils"
 	"golang.org/x/crypto/bcrypt"
 	"net/http"
 	"time"

@@ -1,7 +1,7 @@
 package dao
 
 import (
-	"go_project2/internal/model"
+	"content_system/internal/model"
 	"gorm.io/gorm"
 	"testing"
 )

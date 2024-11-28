@@ -1,14 +1,14 @@
 package services
 
 import (
+	"content_system/internal/api/operate"
 	"github.com/gin-gonic/gin"
-	"go_project2/internal/dao"
 	"net/http"
 )
 
 // 前端需要传的参数：id是必须的，因为需要知道删除的是哪个数据
 type ContentDeleteReq struct {
-	ID int `json:"id" binding:"required"` // 内容ID
+	ID int64 `json:"id" binding:"required"` // 内容ID
 }
 
 // 后端返回的结构
@@ -22,28 +22,15 @@ func (c *CmsAPP) ContentDelete(ctx *gin.Context) {
 		ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
-	//实例化dao层的实例
-	contentDao := dao.NewContentDao(c.db)
-	//先判断这个数据是否存在
-	ok, err := contentDao.IsExist(req.ID)
-	//出错
+	//下面不走，直接db的方法，走的是grpc的方法。【内容网关功能很干净了，不走db的操作，转发给grpc去执行操作】
+	rsp, err := c.operateAppClient.DeleteContent(ctx, &operate.DeleteContentReq{Id: req.ID})
 	if err != nil {
 		ctx.JSON(http.StatusInternalServerError, gin.H{"IsExist error": err.Error()})
-		return
-	} //内容不存在
-	if !ok {
-		ctx.JSON(http.StatusBadRequest, gin.H{"error": "内容本身不存在，无法删除"})
-		return
-	} //内容存在的话，则进行删除
-	if err := contentDao.Delete(req.ID); err != nil {
-		ctx.JSON(http.StatusInternalServerError, gin.H{"delete error": err.Error()})
 		return
 	}
 	ctx.JSON(http.StatusOK, gin.H{
 		"code": 0,
 		"msg":  "ok",
-		"data": &ContentDeleteRsp{
-			Message: "content删除ok",
-		},
+		"data": rsp,
 	})
 }

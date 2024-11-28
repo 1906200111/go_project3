@@ -1,8 +1,8 @@
 package dao
 
 import (
+	"content_system/internal/model"
 	"fmt"
-	"go_project2/internal/model"
 	"gorm.io/gorm"
 	"log"
 )

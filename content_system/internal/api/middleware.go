@@ -1,10 +1,10 @@
 package api
 
 import (
+	"content_system/internal/utils"
 	"context"
 	"github.com/gin-gonic/gin"
 	"github.com/redis/go-redis/v9"
-	"go_project2/internal/utils"
 	"net/http"
 )
 

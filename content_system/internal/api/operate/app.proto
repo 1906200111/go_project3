@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package api.operate;
 
-option go_package = "go_project2/internal/api/operate;operate";
+option go_package = "content_system/internal/api/operate;operate";
 option java_multiple_files = true;
 option java_package = "api.operate";
 

@@ -1,8 +1,8 @@
 package api
 
 import (
+	"content_system/internal/services"
 	"github.com/gin-gonic/gin"
-	"go_project2/internal/services"
 )
 
 // 设置项目的根路径，所有接口都加上api开头

@@ -1,9 +1,8 @@
 package services
 
 import (
+	"content_system/internal/api/operate"
 	"github.com/gin-gonic/gin"
-	"go_project2/internal/dao"
-	"go_project2/internal/model"
 	"net/http"
 	"time"
 )
@@ -35,20 +34,22 @@ func (c *CmsAPP) ContentCreate(ctx *gin.Context) {
 		ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
-	contentDao := dao.NewContentDao(c.db)
-	err := contentDao.Create(model.ContentDetail{
-		Title:          req.Title,
-		Description:    req.Description,
-		Author:         req.Author,
-		VideoURL:       req.VideoURL,
-		Thumbnail:      req.Thumbnail,
-		Category:       req.Category,
-		Duration:       req.Duration,
-		Resolution:     req.Resolution,
-		FileSize:       req.FileSize,
-		Format:         req.Format,
-		Quality:        int(req.Quality),
-		ApprovalStatus: int(req.ApprovalStatus),
+	//下面不走，直接db的方法，走的是微服务grpc的方法。【内容网关功能很干净了，不走db的操作，转发给grpc去执行操作】
+	rsp, err := c.operateAppClient.CreateContent(ctx, &operate.CreateContentReq{
+		Content: &operate.Content{
+			Title:          req.Title,
+			Description:    req.Description,
+			Author:         req.Author,
+			VideoUrl:       req.VideoURL,
+			Thumbnail:      req.Thumbnail,
+			Category:       req.Category,
+			Duration:       req.Duration.Milliseconds(),
+			Resolution:     req.Resolution,
+			FileSize:       req.FileSize,
+			Format:         req.Format,
+			Quality:        req.Quality,
+			ApprovalStatus: req.ApprovalStatus,
+		},
 	})
 	if err != nil {
 		ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
@@ -57,8 +58,6 @@ func (c *CmsAPP) ContentCreate(ctx *gin.Context) {
 	ctx.JSON(http.StatusOK, gin.H{
 		"code": 0,
 		"msg":  "ok",
-		"data": &ContentCreateRsp{
-			Message: "content创建ok",
-		},
+		"data": rsp,
 	})
 }
