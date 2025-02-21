@@ -20,6 +20,11 @@ func (c *CmsAPP) UserUpdate(ctx *gin.Context) {
 		ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
+
+	if req.ID == 0 {
+		ctx.JSON(http.StatusInternalServerError, gin.H{"error": "更新，需要指定更新的ID"})
+	}
+
 	//密码加密
 	hashedPassword, err := encryptPassword(req.Password)
 	if err != nil {
