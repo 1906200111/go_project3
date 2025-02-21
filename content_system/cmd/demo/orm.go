@@ -1,15 +1,15 @@
 package main
 
 import (
+	"content_system/internal/model"
+	"fmt"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
 
-type Account struct {
-}
-
 func main() {
 	db := connDB()
+	fmt.Println(db)
 }
 func connDB() *gorm.DB {
 	//user:password@tcp(localhost:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local
@@ -18,6 +18,7 @@ func connDB() *gorm.DB {
 		panic(er)
 	}
 	//拿到mysqlDB的实例
+	mysqlDB.AutoMigrate(&model.Account{}) //自动迁移，自动创建表，默认蛇行负数
 	db, err := mysqlDB.DB()
 	if err != nil {
 		panic(err)

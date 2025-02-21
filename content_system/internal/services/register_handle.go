@@ -7,13 +7,12 @@ import (
 	"github.com/gin-gonic/gin"
 	"golang.org/x/crypto/bcrypt"
 	"net/http"
-	"time"
 )
 
 // 模型的绑定与验证：绑定：【处理我们自定义的数据结构体】；字段验证：【不能为空，手机号规则，邮箱规则,长度】
 // 前端请求的结构体数据集【注册账号，前端要传给我：用户名、密码、名称这3个信息】
 type RegisterReq struct {
-	UserID   string `json:"user_id" binding:"required"` //定义前端传过来，必须要包含name字段(required)
+	UserID   string `json:"user_id" binding:"required"` //定义前端传过来，必须要包含该字段(required)
 	Password string `json:"password" binding:"required"`
 	Nickname string `json:"nickname" binding:"required"`
 }
@@ -46,7 +45,7 @@ func (cms *CmsAPP) Register(c *gin.Context) {
 	//初始化dao层的实例，用dao层的方法，实现功能逻辑
 	accountDao := dao.NewAccountDao(cms.db)
 
-	//账号校验（数据库中存在该账号的话，要提示错误）
+	//账号校验（数据库中存在该账号的话，要提示注册错误）
 	isExist, err := accountDao.IsExist(req.UserID)
 	if err != nil { //注册发生错误
 		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
@@ -58,13 +57,10 @@ func (cms *CmsAPP) Register(c *gin.Context) {
 	} //如果不存在，则执行下面的内容
 
 	//账号信息持久化(写入数据库)
-	nowTime := time.Now()
 	if err := accountDao.Create(model.Account{ //填写Account所有字段
 		UserID:   req.UserID,
 		Password: hashedPassword,
 		Nickname: req.Nickname,
-		Ct:       nowTime,
-		Ut:       nowTime,
 	}); err != nil { //如果发生错误
 		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return

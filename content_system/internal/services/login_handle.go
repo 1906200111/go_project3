@@ -3,6 +3,7 @@ package services
 import (
 	"content_system/internal/dao"
 	"content_system/internal/utils"
+	"content_system/jwt"
 	"context"
 	"fmt"
 	"github.com/gin-gonic/gin"
@@ -17,7 +18,7 @@ const session_time = 8 * time.Hour
 // 模型的绑定与验证：绑定：【处理我们自定义的数据结构体】；字段验证：【不能为空，手机号规则，邮箱规则,长度】
 // 前端请求的结构体数据【登录只需要前端传给我账号和密码】
 type LoginReq struct {
-	UserID   string `json:"user_id" binding:"required"` //定义前端传过来，必须要包含name字段(required)
+	UserID   string `json:"user_id" binding:"required"` //定义前端传过来，必须要包含该字段(required)
 	Password string `json:"password" binding:"required"`
 }
 
@@ -53,7 +54,12 @@ func (cms *CmsAPP) Login(c *gin.Context) {
 	}
 
 	//账号密码校验成功，接下来返回Session信息给前端
-	sessionID, err := cms.GenerateSessionId(context.Background(), account.UserID)
+	//sessionID, err := cms.GenerateSessionId(context.Background(), account.UserID)
+
+	//上面是Session的方法，在GenerateSessionId函数中，需要使用redis存入内存中。
+	//这里我们使用jwt的方法，加密的方法 import "content_system/jwt"
+	sessionID, err := jwt.SetToken(req.UserID)
+
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "系统设置session错误，请重新尝试"})
 	}

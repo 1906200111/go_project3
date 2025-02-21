@@ -34,7 +34,7 @@ func (c *CmsAPP) ContentCreate(ctx *gin.Context) {
 		ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
-	//下面不走，直接db的方法，走的是微服务grpc的方法。【内容网关功能很干净了，不走db的操作，转发给grpc去执行操作】
+	//下面不走，直接db的方法(dao层)，走的是微服务grpc的方法。【内容网关功能很干净了，不走db的操作，转发给grpc去执行操作】
 	rsp, err := c.operateAppClient.CreateContent(ctx, &operate.CreateContentReq{
 		Content: &operate.Content{
 			Title:          req.Title,

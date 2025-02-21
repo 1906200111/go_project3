@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+package api.operate;
+
+option go_package = "user_manage/api/operate;operate";
+option java_multiple_files = true;
+option java_package = "api.operate";
+
+service User {
+	rpc CreateUser (CreateUserRequest) returns (CreateUserReply);
+	rpc UpdateUser (UpdateUserRequest) returns (UpdateUserReply);
+	rpc DeleteUser (DeleteUserRequest) returns (DeleteUserReply);
+	rpc GetUser (GetUserRequest) returns (GetUserReply);
+	rpc ListUser (ListUserRequest) returns (ListUserReply);
+}
+
+message UserInfo {
+	int64 id = 1;
+	string userid = 2;
+	string password = 3;
+	string nickname = 4;
+}
+
+message CreateUserRequest {
+	UserInfo user = 1;
+}
+message CreateUserReply {}
+
+message UpdateUserRequest {
+	UserInfo user = 1;
+}
+message UpdateUserReply {}
+
+message DeleteUserRequest {
+	int64 id = 1;
+}
+message DeleteUserReply {}
+
+message GetUserRequest {
+	int64 id = 1;
+	string userid = 2;
+	string nickname = 3;
+	int32 page = 4;
+	int32 page_size = 5;
+}
+message GetUserReply {
+	int64 total = 1;
+	repeated UserInfo user = 2;
+}
+
+message ListUserRequest {}
+message ListUserReply {}

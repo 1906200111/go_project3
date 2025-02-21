@@ -3,24 +3,24 @@ package main
 import (
 	"flag"
 	"github.com/go-kratos/kratos/contrib/registry/etcd/v2"
+	clientv3 "go.etcd.io/etcd/client/v3"
 	"os"
 
-	"content_manage/internal/conf"
+	"user_manage/internal/conf"
+
 	"github.com/go-kratos/kratos/v2"
 	"github.com/go-kratos/kratos/v2/config"
 	"github.com/go-kratos/kratos/v2/config/file"
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/go-kratos/kratos/v2/middleware/tracing"
 	"github.com/go-kratos/kratos/v2/transport/grpc"
-	clientv3 "go.etcd.io/etcd/client/v3"
 	_ "go.uber.org/automaxprocs"
 )
 
 // go build -ldflags "-X main.Version=x.y.z"
-// etcd注册的一些Key
 var (
 	// Name is the name of the compiled software.
-	Name = "content_manage"
+	Name = "user_manage"
 	// Version is the version of the compiled software.
 	Version = "1.0.0"
 	// flagconf is the config flag.
@@ -41,6 +41,7 @@ func newApp(logger log.Logger, gs *grpc.Server) *kratos.App {
 	if err != nil {
 		panic(err)
 	}
+
 	return kratos.New(
 		kratos.ID(id),     //本台系统的名字
 		kratos.Name(Name), //自己起的etcd的name标识符
@@ -50,7 +51,7 @@ func newApp(logger log.Logger, gs *grpc.Server) *kratos.App {
 		kratos.Server(
 			gs,
 		),
-		kratos.Registrar(reg), //把grpc的9000端口服务，注册到etcd中
+		kratos.Registrar(reg), //把grpc的端口服务，注册到etcd中
 	)
 }
 

@@ -1,15 +1,15 @@
 package data
 
 import (
-	"content_manage/internal/conf"
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/google/wire"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
+	"user_manage/internal/conf"
 )
 
 // ProviderSet is data providers.
-var ProviderSet = wire.NewSet(NewData, NewContentRepo)
+var ProviderSet = wire.NewSet(NewData, NewUserRepo)
 
 // Data .
 type Data struct {
@@ -25,7 +25,7 @@ func NewData(c *conf.Data, logger log.Logger) (*Data, func(), error) {
 	if er != nil {
 		panic(er)
 	}
-	mysqlDB.AutoMigrate(&ContentDetail{}) //自动迁移，自动创建表，默认蛇行负数
+	mysqlDB.AutoMigrate(&UserDetail{}) //自动迁移，自动创建表，默认蛇行负数
 	//拿到mysqlDB的实例
 	db, err := mysqlDB.DB()
 	if err != nil {

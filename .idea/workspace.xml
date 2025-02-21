@@ -5,26 +5,97 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="638733d8-6419-445f-b290-a05efb60e12f" name="更改" comment="更新">
+      <change afterPath="$PROJECT_DIR$/content_system/internal/api/jwt.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content_system/internal/api/operate/user.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content_system/internal/api/operate/user.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content_system/internal/api/operate/user_grpc.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content_system/internal/services/user_create_handle.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content_system/internal/services/user_delete_handle.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content_system/internal/services/user_find_handle.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content_system/internal/services/user_update_handle.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content_system/jwt/jwt.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_manage/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_manage/api/operate/user.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_manage/api/operate/user.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_manage/api/operate/user_grpc.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_manage/cmd/client/client.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_manage/internal/biz/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_manage/internal/data/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_manage/internal/service/createuser_handle.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_manage/internal/service/deleteuser_handle.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_manage/internal/service/getuser_handle.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_manage/internal/service/updateuser_handle.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_manage/internal/service/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/微服务化.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content_manage/cmd/content_manage/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/cmd/content_manage/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content_manage/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content_manage/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content_system/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_system/cmd/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_manage/configs/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/configs/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_manage/internal/data/data.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_manage/internal/data/data.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_system/cmd/demo/orm.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_system/cmd/demo/orm.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content_system/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/content_system/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content_system/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/content_system/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content_system/internal/api/middleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_system/internal/api/middleware.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content_system/internal/api/operate/app.proto" beforeDir="false" afterPath="$PROJECT_DIR$/content_system/internal/api/operate/app.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content_system/internal/api/routers.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_system/internal/api/routers.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content_system/internal/dao/account.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_system/internal/dao/account.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content_system/internal/dao/content.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_system/internal/dao/content.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content_system/internal/dao/content_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_system/internal/dao/content_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_system/internal/model/account.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_system/internal/model/account.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content_system/internal/services/cms.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_system/internal/services/cms.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content_system/internal/services/content_create_handle.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_system/internal/services/content_create_handle.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content_system/internal/services/content_delete_handle.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_system/internal/services/content_delete_handle.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content_system/internal/services/content_find_handle.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_system/internal/services/content_find_handle.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content_system/internal/services/content_update_handle.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_system/internal/services/content_update_handle.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content_system/internal/services/login_handle.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_system/internal/services/login_handle.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content_system/internal/services/register_handle.go" beforeDir="false" afterPath="$PROJECT_DIR$/content_system/internal/services/register_handle.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/api/helloworld/v1/error_reason.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/api/helloworld/v1/error_reason.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/api/helloworld/v1/greeter.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/api/helloworld/v1/greeter.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/api/helloworld/v1/greeter_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/api/helloworld/v1/greeter_http.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/cmd/helloworld/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/cmd/user_manage/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/cmd/helloworld/wire.go" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/cmd/user_manage/wire.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/cmd/helloworld/wire_gen.go" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/cmd/user_manage/wire_gen.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/configs/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/configs/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/internal/biz/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/internal/biz/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/internal/biz/biz.go" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/internal/biz/biz.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/internal/biz/greeter.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/internal/conf/conf.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/internal/conf/conf.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/internal/conf/conf.proto" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/internal/conf/conf.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/internal/data/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/internal/data/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/internal/data/data.go" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/internal/data/data.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/internal/data/greeter.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/internal/server/grpc.go" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/internal/server/grpc.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/internal/server/http.go" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/internal/server/http.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/internal/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/internal/server/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/internal/service/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/internal/service/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/internal/service/greeter.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/internal/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/internal/service/service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/openapi.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/openapi.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/third_party/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/third_party/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/third_party/errors/errors.proto" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/third_party/errors/errors.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/third_party/google/api/annotations.proto" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/third_party/google/api/annotations.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/third_party/google/api/client.proto" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/third_party/google/api/client.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/third_party/google/api/field_behavior.proto" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/third_party/google/api/field_behavior.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/third_party/google/api/http.proto" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/third_party/google/api/http.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/third_party/google/api/httpbody.proto" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/third_party/google/api/httpbody.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/third_party/google/protobuf/any.proto" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/third_party/google/protobuf/any.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/third_party/google/protobuf/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/third_party/google/protobuf/api.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/third_party/google/protobuf/compiler/plugin.proto" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/third_party/google/protobuf/compiler/plugin.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/third_party/google/protobuf/descriptor.proto" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/third_party/google/protobuf/descriptor.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/third_party/google/protobuf/duration.proto" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/third_party/google/protobuf/duration.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/third_party/google/protobuf/empty.proto" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/third_party/google/protobuf/empty.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/third_party/google/protobuf/field_mask.proto" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/third_party/google/protobuf/field_mask.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/third_party/google/protobuf/source_context.proto" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/third_party/google/protobuf/source_context.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/third_party/google/protobuf/struct.proto" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/third_party/google/protobuf/struct.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/third_party/google/protobuf/timestamp.proto" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/third_party/google/protobuf/timestamp.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/third_party/google/protobuf/type.proto" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/third_party/google/protobuf/type.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/third_party/google/protobuf/wrappers.proto" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/third_party/google/protobuf/wrappers.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/third_party/openapi/v3/annotations.proto" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/third_party/openapi/v3/annotations.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/third_party/openapi/v3/openapi.proto" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/third_party/openapi/v3/openapi.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/third_party/validate/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/third_party/validate/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloworld/third_party/validate/validate.proto" beforeDir="false" afterPath="$PROJECT_DIR$/user_manage/third_party/validate/validate.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,36 +136,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "DefaultGoTemplateProperty": "Go File",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "git-widget-placeholder": "main",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "D:/Go Project/go_project3/go_project2/internal/api",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;Makefile 目标.build.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.automatic.dependencies.download&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Go Project/go_project4&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Go Project\go_project3\content_system\internal\api\operate" />
       <recent name="D:\Go Project\go_project3\go_project2\internal\api" />
       <recent name="D:\Go Project\go_project3\go_project2" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="build" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/user_manage/Makefile" target="build" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Makefile 目标.build" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>

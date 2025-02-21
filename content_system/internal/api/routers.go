@@ -17,6 +17,7 @@ func CmsRouter(r *gin.Engine) {
 	sessionAuth := NewSessionAuth()
 	//创建【路由组/cms/】
 	cmsGroup := r.Group(rootPath + "/cms").Use(sessionAuth.Auth) //使用Use()方法，为这个组的接口，加入鉴权Auth中间件
+	//cmsGroup := r.Group(rootPath + "/cms").Use(JwtToken()) //使用jwt中间件
 	{
 		//路径/api/cms/ping
 		cmsGroup.GET("/ping", cmsApp.Hello)
@@ -28,6 +29,15 @@ func CmsRouter(r *gin.Engine) {
 		cmsGroup.POST("/content/delete", cmsApp.ContentDelete)
 		//路径/api/cms/content/find
 		cmsGroup.POST("/content/find", cmsApp.ContentFind)
+
+		//路径/api/cms/user/create
+		cmsGroup.POST("/user/create", cmsApp.UserCreate)
+		//路径/api/cms/content/update
+		cmsGroup.POST("/user/update", cmsApp.UserUpdate)
+		//路径/api/cms/content/delete
+		cmsGroup.POST("/user/delete", cmsApp.UserDelete)
+		//路径/api/cms/content/find
+		cmsGroup.POST("/user/find", cmsApp.UserFind)
 	}
 	//创建不需要鉴权的【路由组】例如注册、登录
 	noAuthGroup := r.Group(rootPath + "/noauth")
